@@ -1,0 +1,74 @@
+name: CineVerse CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+
+  frontend-build:
+    runs-on: MacOs-latest
+
+    defaults:
+      run:
+        working-directory: frontend
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Frontend
+        run: npm run build
+
+  backend-build:
+    runs-on: MacOS-latest
+
+    strategy:
+      matrix:
+        service:
+          - auth-service
+          - movie-service
+          - booking-service
+          - notification-service
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Build Service
+        run: |
+          cd backend/${{ matrix.service }}
+          mvn clean package -DskipTests
+
+  docker-build:
+    needs:
+      - frontend-build
+      - backend-build
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker Images
+        run: docker compose build
