@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cineverse_auth
+    username: admin
+    password: admin123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+jwt:
+  secret: cineverse-super-secret-jwt-key-that-is-at-least-256-bits-long-for-hs256
+  expiration: 86400000  # 24 hours in ms
+
+logging:
+  level:
+    com.cineverse.auth: DEBUG

@@ -1,0 +1,258 @@
+.movie-detail-hero {
+  position: relative;
+  min-height: 450px;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-2xl) 0;
+  margin-top: -80px;
+  padding-top: calc(80px + var(--space-2xl));
+}
+
+.detail-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center top;
+  filter: blur(30px) brightness(0.3);
+  transform: scale(1.1);
+}
+
+.detail-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10, 14, 23, 0.6), var(--color-bg-primary));
+}
+
+.detail-hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: var(--space-2xl);
+  align-items: flex-end;
+}
+
+.detail-poster-wrap {
+  flex-shrink: 0;
+}
+
+.detail-poster {
+  width: 260px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-info {
+  flex: 1;
+  padding-bottom: var(--space-md);
+}
+
+.detail-title {
+  font-size: var(--font-size-4xl);
+  font-weight: 900;
+  margin-bottom: var(--space-md);
+  line-height: 1.1;
+}
+
+.detail-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.detail-meta > span {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.detail-rating {
+  font-weight: 700;
+  color: var(--color-accent-gold) !important;
+}
+
+.detail-genres {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.detail-description {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+  max-width: 600px;
+}
+
+.detail-director {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.director-label {
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.detail-section {
+  padding: var(--space-2xl) 0;
+}
+
+/* Shows Grid */
+.shows-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.show-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.show-theatre {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 200px;
+}
+
+.show-theatre-name {
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+}
+
+.show-screen-name {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.show-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.show-date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.show-clock {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-accent-gold);
+}
+
+.show-price {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+/* Reviews */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.review-card {
+  padding: var(--space-lg);
+}
+
+.review-card:hover {
+  transform: none;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gradient-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #0a0e17;
+  flex-shrink: 0;
+}
+
+.review-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.review-author {
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+}
+
+.review-date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.review-rating {
+  color: var(--color-accent-gold);
+  font-size: var(--font-size-base);
+  letter-spacing: 2px;
+}
+
+.review-text {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+.no-reviews {
+  color: var(--color-text-muted);
+  font-style: italic;
+  text-align: center;
+  padding: var(--space-2xl);
+}
+
+@media (max-width: 768px) {
+  .detail-hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .detail-poster {
+    width: 200px;
+  }
+  .detail-title {
+    font-size: var(--font-size-3xl);
+  }
+  .detail-meta {
+    justify-content: center;
+  }
+  .detail-genres {
+    justify-content: center;
+  }
+  .detail-description {
+    text-align: left;
+  }
+  .show-card {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+}

@@ -1,0 +1,223 @@
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.booking-show-info {
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.booking-show-info:hover {
+  transform: none;
+}
+
+.show-movie-info {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.show-movie-poster {
+  width: 80px;
+  border-radius: var(--border-radius-md);
+  flex-shrink: 0;
+}
+
+.show-movie-title {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.show-movie-meta {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.show-venue {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.show-timing {
+  font-size: var(--font-size-sm);
+  color: var(--color-accent-gold);
+  font-weight: 600;
+}
+
+.seat-section-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+/* Summary sidebar */
+.booking-sidebar {
+  position: sticky;
+  top: 96px;
+}
+
+.booking-summary {
+  padding: var(--space-xl);
+}
+
+.booking-summary:hover {
+  transform: none;
+}
+
+.summary-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+}
+
+.summary-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.summary-value {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-align: right;
+  max-width: 60%;
+}
+
+.summary-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: var(--space-md) 0;
+}
+
+.summary-total {
+  padding: var(--space-md) 0;
+}
+
+.total-price {
+  font-size: var(--font-size-2xl) !important;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.booking-btn {
+  width: 100%;
+  margin-top: var(--space-md);
+}
+
+/* Confirmation */
+.booking-confirmed {
+  text-align: center;
+  padding: var(--space-2xl) 0;
+}
+
+.confirm-icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-lg);
+  animation: float 2s ease-in-out infinite;
+}
+
+.confirm-title {
+  font-size: var(--font-size-4xl);
+  font-weight: 900;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-xl);
+}
+
+.confirm-ticket {
+  max-width: 450px;
+  margin: 0 auto var(--space-xl);
+  padding: var(--space-xl);
+  text-align: left;
+}
+
+.confirm-ticket:hover {
+  transform: none;
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+}
+
+.ticket-brand {
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ticket-movie {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: var(--border-subtle);
+}
+
+.ticket-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.ticket-details strong {
+  color: var(--color-text-primary);
+}
+
+.ticket-barcode {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 2px dashed rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-family: monospace;
+  letter-spacing: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  overflow: hidden;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+  .booking-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .show-movie-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}

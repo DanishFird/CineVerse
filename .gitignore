@@ -1,0 +1,27 @@
+# Maven
+**/target/
+*.jar
+*.war
+*.ear
+
+# Node / Frontend
+**/node_modules/
+**/dist/
+.eslintcache
+
+# IDEs and editors
+.idea/
+*.iml
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

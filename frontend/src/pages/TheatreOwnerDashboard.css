@@ -1,0 +1,59 @@
+.theatre-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.theatre-card {
+  padding: var(--space-lg);
+  border: var(--border-subtle);
+  border-radius: var(--border-radius-md);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.theatre-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-md);
+}
+
+.theatre-name {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.theatre-location {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.screen-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.screen-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--border-radius-sm);
+}
+
+.screen-name {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.screen-capacity {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.add-btn {
+  align-self: flex-start;
+}

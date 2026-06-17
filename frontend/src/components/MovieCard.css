@@ -1,0 +1,118 @@
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--border-radius-lg);
+}
+
+.movie-poster-wrap {
+  position: relative;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.movie-card:hover .movie-poster {
+  transform: scale(1.08);
+}
+
+.movie-poster-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.movie-card:hover .movie-poster-overlay {
+  opacity: 1;
+}
+
+.movie-play-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--gradient-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #0a0e17;
+  transform: scale(0.8);
+  transition: transform var(--transition-spring);
+  box-shadow: var(--shadow-glow-gold);
+}
+
+.movie-card:hover .movie-play-btn {
+  transform: scale(1);
+}
+
+.movie-rating-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.rating-star {
+  color: var(--color-accent-gold);
+}
+
+.movie-info {
+  padding: var(--space-md);
+}
+
+.movie-title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.movie-genre {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.movie-duration {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.movie-language {
+  font-size: var(--font-size-xs);
+  color: var(--color-accent-gold);
+  font-weight: 500;
+}

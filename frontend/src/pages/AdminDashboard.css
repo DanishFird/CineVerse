@@ -1,0 +1,74 @@
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.admin-stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-xl);
+}
+
+.admin-stat .stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-stat .stat-value {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.admin-stat .stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.admin-stat .stat-icon {
+  font-size: 2rem;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  border-bottom: var(--border-subtle);
+  padding-bottom: var(--space-md);
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border-radius: var(--border-radius-md);
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-primary);
+}
+
+.tab-btn.active {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-accent-gold);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.admin-content {
+  padding: var(--space-lg);
+  overflow-x: auto;
+}
+
+.admin-content:hover {
+  transform: none;
+}
